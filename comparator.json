@@ -1,0 +1,38 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "BalancedRepetitionThresholdChallenge.rtb_7_eq",
+    "BalancedRepetitionThresholdChallenge.rtb_9_eq",
+    "BalancedRepetitionThresholdChallenge.rtb_10_eq",
+    "BalancedRepetitionThresholdChallenge.rtb_7_lt_printed",
+    "BalancedRepetitionThresholdChallenge.rtb_9_lt_printed",
+    "BalancedRepetitionThresholdChallenge.rtb_10_lt_printed",
+    "BalancedRepetitionThresholdChallenge.rtb_strict_7_eq",
+    "BalancedRepetitionThresholdChallenge.rtb_strict_9_eq",
+    "BalancedRepetitionThresholdChallenge.rtb_strict_10_eq",
+    "BalancedRepetitionThresholdChallenge.critExp_ge_7",
+    "BalancedRepetitionThresholdChallenge.critExp_ge_9",
+    "BalancedRepetitionThresholdChallenge.critExp_ge_10",
+    "BalancedRepetitionThresholdChallenge.v7_isBalanced",
+    "BalancedRepetitionThresholdChallenge.v9_isBalanced",
+    "BalancedRepetitionThresholdChallenge.v10_isBalanced",
+    "BalancedRepetitionThresholdChallenge.v7_usesAllLetters",
+    "BalancedRepetitionThresholdChallenge.v9_usesAllLetters",
+    "BalancedRepetitionThresholdChallenge.v10_usesAllLetters",
+    "BalancedRepetitionThresholdChallenge.v7_attains",
+    "BalancedRepetitionThresholdChallenge.v9_attains",
+    "BalancedRepetitionThresholdChallenge.v10_attains",
+    "BalancedRepetitionThresholdChallenge.v7_critExp_eq",
+    "BalancedRepetitionThresholdChallenge.v9_critExp_eq",
+    "BalancedRepetitionThresholdChallenge.v10_critExp_eq",
+    "BalancedRepetitionThresholdChallenge.sSup_minPeriodExponentSet_eq_critExp",
+    "BalancedRepetitionThresholdChallenge.r22_1_1_main"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

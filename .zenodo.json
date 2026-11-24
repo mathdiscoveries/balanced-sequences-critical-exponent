@@ -1,0 +1,72 @@
+{
+  "creators": [
+    {
+      "name": "Hughes, Tyler B.",
+      "orcid": "0000-0001-6221-9014"
+    }
+  ],
+  "title": "Balanced-Sequence Repetition Threshold Refutation: Exact RTB(7) = 6/5, RTB(9) = 8/7, and RTB(10) = 9/8",
+  "description": "Unconditional Lean 4 (v4.35.0) + Mathlib formalization establishing exact values of the balanced-sequence repetition threshold RTB(7) = RTB*(7) = 6/5 < 5/4, RTB(9) = RTB*(9) = 8/7 < 7/6, and RTB(10) = RTB*(10) = 9/8 < 8/7, refuting three of the six values (d-2)/(d-3) listed as established for 5 <= d <= 10 in papers from 2018 to 2023. All 26 compared theorems (193 public declarations in BalancedRepetitionThreshold; 11 of 13 files import Mathlib) compile with zero sorry, zero native_decide, and Lean's standard axioms only. Companion paper coverage: 6 of 6 main results in Lean 4 (100%) · 12 of 12 abstract claims in Lean 4 (100%) · 18 of 18 paper claims in Lean 4 (100%). The cases d = 5, 6, 8, and d >= 11 are not addressed. Generated and checked by AI research agents built and directed by Tyler B. Hughes. No human mathematician has yet refereed the proof.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "apache-2.0",
+  "language": "eng",
+  "keywords": [
+    "Lean 4",
+    "Mathlib",
+    "formalized mathematics",
+    "theorem proving",
+    "balanced words",
+    "critical exponent",
+    "repetition threshold",
+    "Sturmian words",
+    "combinatorics on words",
+    "math.CO",
+    "cs.FL",
+    "MSC 2020: 68R15",
+    "MSC 2020: 05A05"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://mathdiscoveries.org/results/balanced-sequences-critical-exponent",
+      "relation": "isSupplementTo",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/1801.05334",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/1902.00503",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2108.07503",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2112.02854",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2208.00366",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2211.11877",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://arxiv.org/abs/2309.00988",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "notes": "Unrefereed. Generated and checked by AI research agents built and directed by Tyler B. Hughes."
+}

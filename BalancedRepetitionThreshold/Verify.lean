@@ -1,0 +1,252 @@
+module
+
+public import BalancedRepetitionThreshold
+public import Solution
+
+/-! # Complete Kernel Axiom Audit for `BalancedRepetitionThreshold`
+
+Runs `#print axioms` on 100% of public `theorem` and `lemma` declarations across all
+modules in `BalancedRepetitionThreshold` (`missing = []`, `extra = []`, `dups = []`). -/
+
+-- Defs.lean (15 declarations)
+#print axioms BalancedRepetitionThreshold.length_factor
+#print axioms BalancedRepetitionThreshold.count_factor_eq_card_filter
+#print axioms BalancedRepetitionThreshold.isBalancedList_prefix_of_isBalanced
+#print axioms BalancedRepetitionThreshold.one_mem_exponentSet
+#print axioms BalancedRepetitionThreshold.one_mem_minPeriodExponentSet
+#print axioms BalancedRepetitionThreshold.one_le_critExp
+#print axioms BalancedRepetitionThreshold.sSup_minPeriodExponentSet_eq_critExp
+#print axioms BalancedRepetitionThreshold.sSup_unrestrictedExponentSet_eq_critExp
+#print axioms BalancedRepetitionThreshold.critExp_le_of_run_bound
+#print axioms BalancedRepetitionThreshold.le_critExp_of_period
+#print axioms BalancedRepetitionThreshold.attains_critExp_of_period
+#print axioms BalancedRepetitionThreshold.RTB_le_RTB_strict
+#print axioms BalancedRepetitionThreshold.le_RTB_of_forall
+#print axioms BalancedRepetitionThreshold.RTB_le_of_witness
+#print axioms BalancedRepetitionThreshold.RTB_strict_le_of_witness
+
+-- LowerBoundEngine.lean (17 declarations)
+#print axioms BalancedRepetitionThreshold.memTake_eq_true
+#print axioms BalancedRepetitionThreshold.eqPrefix_eq_true
+#print axioms BalancedRepetitionThreshold.countTake_eq_count_take
+#print axioms BalancedRepetitionThreshold.countTake_drop_eq_factor_count
+#print axioms BalancedRepetitionThreshold.matchesPrefixRev_nil
+#print axioms BalancedRepetitionThreshold.matchesPrefixRev_extend
+#print axioms BalancedRepetitionThreshold.isRefuted_of_memTake
+#print axioms BalancedRepetitionThreshold.isRefuted_step
+#print axioms BalancedRepetitionThreshold.isRefuted_rep
+#print axioms BalancedRepetitionThreshold.isRefuted_unbal
+#print axioms BalancedRepetitionThreshold.nextCandidate_none
+#print axioms BalancedRepetitionThreshold.nextCandidate_some
+#print axioms BalancedRepetitionThreshold.checkLowerCert_sound
+#print axioms BalancedRepetitionThreshold.checkLowerCertList_sound
+#print axioms BalancedRepetitionThreshold.isRefuted_split1
+#print axioms BalancedRepetitionThreshold.isRefuted_split2
+#print axioms BalancedRepetitionThreshold.rtb_ge_of_refuted
+
+-- LowerBound7.lean (3 declarations)
+#print axioms BalancedRepetitionThreshold.isRefuted_7
+#print axioms BalancedRepetitionThreshold.critExp_ge_7
+#print axioms BalancedRepetitionThreshold.rtb_ge_7
+
+-- LowerBound9.lean (3 declarations)
+#print axioms BalancedRepetitionThreshold.isRefuted_9
+#print axioms BalancedRepetitionThreshold.critExp_ge_9
+#print axioms BalancedRepetitionThreshold.rtb_ge_9
+
+-- LowerBound10.lean (3 declarations)
+#print axioms BalancedRepetitionThreshold.isRefuted_10
+#print axioms BalancedRepetitionThreshold.critExp_ge_10
+#print axioms BalancedRepetitionThreshold.rtb_ge_10
+
+-- Sturmian.lean (23 declarations)
+#print axioms BalancedRepetitionThreshold.card_filter_bool_add
+#print axioms BalancedRepetitionThreshold.countTrue_add_countFalse
+#print axioms BalancedRepetitionThreshold.countTrue_succ
+#print axioms BalancedRepetitionThreshold.countFalse_succ
+#print axioms BalancedRepetitionThreshold.countTrue_mono
+#print axioms BalancedRepetitionThreshold.countFalse_mono
+#print axioms BalancedRepetitionThreshold.countTrue_interval
+#print axioms BalancedRepetitionThreshold.countFalse_interval
+#print axioms BalancedRepetitionThreshold.sturmian_int_indicator
+#print axioms BalancedRepetitionThreshold.sturmian_countTrue_eq_floor
+#print axioms BalancedRepetitionThreshold.sturmian_interval_countTrue_eq
+#print axioms BalancedRepetitionThreshold.floor_add_bounds
+#print axioms BalancedRepetitionThreshold.sturmian_interval_countTrue_bounds
+#print axioms BalancedRepetitionThreshold.sturmian_interval_countFalse_bounds
+#print axioms BalancedRepetitionThreshold.sturmian_iff_fract
+#print axioms BalancedRepetitionThreshold.card_mod_interval_bounds
+#print axioms BalancedRepetitionThreshold.mod_count_diff_le_one
+#print axioms BalancedRepetitionThreshold.count_colour_true_eq
+#print axioms BalancedRepetitionThreshold.count_colour_false_eq
+#print axioms BalancedRepetitionThreshold.colour_isBalanced_of_constantGap
+#print axioms BalancedRepetitionThreshold.sturmian_exists_true_index
+#print axioms BalancedRepetitionThreshold.sturmian_exists_false_index
+#print axioms BalancedRepetitionThreshold.colour_usesAllLetters
+
+-- RotationEngine.lean (40 declarations)
+#print axioms BalancedRepetitionThreshold.fract_eq_of_int_add
+#print axioms BalancedRepetitionThreshold.exists_nearest_int
+#print axioms BalancedRepetitionThreshold.sturmian_no_true_match_of_large_dist
+#print axioms BalancedRepetitionThreshold.exists_true_in_block
+#print axioms BalancedRepetitionThreshold.exists_false_in_block
+#print axioms BalancedRepetitionThreshold.exists_two_consec_false_in_block
+#print axioms BalancedRepetitionThreshold.sturmian_run_lt_of_large_dist
+#print axioms BalancedRepetitionThreshold.sturmian_match_counts_of_small_dist
+#print axioms BalancedRepetitionThreshold.sturmian_three_gap_run_bound
+#print axioms BalancedRepetitionThreshold.sturmian_three_gap_run_bound_sym
+#print axioms BalancedRepetitionThreshold.colour_match_implies
+#print axioms BalancedRepetitionThreshold.convP_succ
+#print axioms BalancedRepetitionThreshold.convQ_succ
+#print axioms BalancedRepetitionThreshold.convPPrev_succ
+#print axioms BalancedRepetitionThreshold.convQPrev_succ
+#print axioms BalancedRepetitionThreshold.conv_det
+#print axioms BalancedRepetitionThreshold.convQ_pos
+#print axioms BalancedRepetitionThreshold.convQPrev_bounds
+#print axioms BalancedRepetitionThreshold.convQ_le_two_prev_of_tail_one
+#print axioms BalancedRepetitionThreshold.convP_le_convQ
+#print axioms BalancedRepetitionThreshold.eta_recurrence
+#print axioms BalancedRepetitionThreshold.eta_periodic_ratio
+#print axioms BalancedRepetitionThreshold.eta_level_exists
+#print axioms BalancedRepetitionThreshold.level_basis_decomp
+#print axioms BalancedRepetitionThreshold.convModState_succ
+#print axioms BalancedRepetitionThreshold.convModState_periodic
+#print axioms BalancedRepetitionThreshold.quad_ne_int_div
+#print axioms BalancedRepetitionThreshold.findSemiconvJ_spec
+#print axioms BalancedRepetitionThreshold.checkLinearBound_sound
+#print axioms BalancedRepetitionThreshold.level_three_gap_step
+#print axioms BalancedRepetitionThreshold.level_big_c_bound
+#print axioms BalancedRepetitionThreshold.checkLevelPair_sound
+#print axioms BalancedRepetitionThreshold.checkLevelClass_sound
+#print axioms BalancedRepetitionThreshold.checkCutStep_sound
+#print axioms BalancedRepetitionThreshold.checkCutsIncreasing_step
+#print axioms BalancedRepetitionThreshold.cutVal_strictMono
+#print axioms BalancedRepetitionThreshold.sturmian_factor_mem_cutWords
+#print axioms BalancedRepetitionThreshold.length_colourWord
+#print axioms BalancedRepetitionThreshold.getElem_colourWord_eq
+#print axioms BalancedRepetitionThreshold.checkSmallPeriods_sound
+
+-- WitnessV7.lean (24 declarations)
+#print axioms BalancedRepetitionThreshold.sqrt10_bounds
+#print axioms BalancedRepetitionThreshold.α7_bounds
+#print axioms BalancedRepetitionThreshold.α7_pos
+#print axioms BalancedRepetitionThreshold.α7_lt_half
+#print axioms BalancedRepetitionThreshold.α7_lt_one
+#print axioms BalancedRepetitionThreshold.α7_irrational
+#print axioms BalancedRepetitionThreshold.y7_val_ge
+#print axioms BalancedRepetitionThreshold.yPrime7_val_lt
+#print axioms BalancedRepetitionThreshold.y7_disjoint_yPrime7
+#print axioms BalancedRepetitionThreshold.v7_isBalanced
+#print axioms BalancedRepetitionThreshold.v7_usesAllLetters
+#print axioms BalancedRepetitionThreshold.v7_attains
+#print axioms BalancedRepetitionThreshold.v7_small_periods
+#print axioms BalancedRepetitionThreshold.a7_ge_one
+#print axioms BalancedRepetitionThreshold.a7_per3
+#print axioms BalancedRepetitionThreshold.a7_per12
+#print axioms BalancedRepetitionThreshold.eta7_periodic_ratio
+#print axioms BalancedRepetitionThreshold.θ7_bracket_sound
+#print axioms BalancedRepetitionThreshold.eta7_k1_ratio
+#print axioms BalancedRepetitionThreshold.eta7_k2_ratio
+#print axioms BalancedRepetitionThreshold.v7_large_periods
+#print axioms BalancedRepetitionThreshold.v7_run_bound
+#print axioms BalancedRepetitionThreshold.v7_critExp_le
+#print axioms BalancedRepetitionThreshold.v7_critExp_eq
+
+-- WitnessV9.lean (24 declarations)
+#print axioms BalancedRepetitionThreshold.sqrt2_bounds
+#print axioms BalancedRepetitionThreshold.α9_bounds
+#print axioms BalancedRepetitionThreshold.α9_pos
+#print axioms BalancedRepetitionThreshold.α9_lt_half
+#print axioms BalancedRepetitionThreshold.α9_lt_one
+#print axioms BalancedRepetitionThreshold.α9_irrational
+#print axioms BalancedRepetitionThreshold.y9_val_lt
+#print axioms BalancedRepetitionThreshold.yPrime9_val_ge
+#print axioms BalancedRepetitionThreshold.y9_disjoint_yPrime9
+#print axioms BalancedRepetitionThreshold.v9_isBalanced
+#print axioms BalancedRepetitionThreshold.v9_usesAllLetters
+#print axioms BalancedRepetitionThreshold.v9_attains
+#print axioms BalancedRepetitionThreshold.v9_small_periods
+#print axioms BalancedRepetitionThreshold.a9_ge_one
+#print axioms BalancedRepetitionThreshold.a9_per2
+#print axioms BalancedRepetitionThreshold.a9_per8
+#print axioms BalancedRepetitionThreshold.eta9_periodic_ratio
+#print axioms BalancedRepetitionThreshold.θ9_bracket_sound
+#print axioms BalancedRepetitionThreshold.eta9_k1_ratio
+#print axioms BalancedRepetitionThreshold.eta9_k2_ratio
+#print axioms BalancedRepetitionThreshold.v9_large_periods
+#print axioms BalancedRepetitionThreshold.v9_run_bound
+#print axioms BalancedRepetitionThreshold.v9_critExp_le
+#print axioms BalancedRepetitionThreshold.v9_critExp_eq
+
+-- WitnessV10.lean (25 declarations)
+#print axioms BalancedRepetitionThreshold.sqrt5_bounds
+#print axioms BalancedRepetitionThreshold.α10_bounds
+#print axioms BalancedRepetitionThreshold.α10_pos
+#print axioms BalancedRepetitionThreshold.α10_lt_half
+#print axioms BalancedRepetitionThreshold.α10_lt_one
+#print axioms BalancedRepetitionThreshold.α10_irrational
+#print axioms BalancedRepetitionThreshold.y10_val_lt
+#print axioms BalancedRepetitionThreshold.yPrime10_val_ge
+#print axioms BalancedRepetitionThreshold.y10_disjoint_yPrime10
+#print axioms BalancedRepetitionThreshold.v10_isBalanced
+#print axioms BalancedRepetitionThreshold.v10_usesAllLetters
+#print axioms BalancedRepetitionThreshold.v10_attains
+#print axioms BalancedRepetitionThreshold.v10_small_periods
+#print axioms BalancedRepetitionThreshold.a10_ge_one
+#print axioms BalancedRepetitionThreshold.a10_tail_one
+#print axioms BalancedRepetitionThreshold.a10_per1
+#print axioms BalancedRepetitionThreshold.a10_per20
+#print axioms BalancedRepetitionThreshold.eta10_periodic_ratio
+#print axioms BalancedRepetitionThreshold.θ10_bounds
+#print axioms BalancedRepetitionThreshold.eta10_k1_ratio
+#print axioms BalancedRepetitionThreshold.eta10_k2_ratio
+#print axioms BalancedRepetitionThreshold.v10_large_periods
+#print axioms BalancedRepetitionThreshold.v10_run_bound
+#print axioms BalancedRepetitionThreshold.v10_critExp_le
+#print axioms BalancedRepetitionThreshold.v10_critExp_eq
+
+-- Main.lean (16 declarations)
+#print axioms BalancedRepetitionThreshold.rtb_le_7
+#print axioms BalancedRepetitionThreshold.rtb_strict_le_7
+#print axioms BalancedRepetitionThreshold.rtb_7_eq
+#print axioms BalancedRepetitionThreshold.rtb_strict_7_eq
+#print axioms BalancedRepetitionThreshold.rtb_7_lt_printed
+#print axioms BalancedRepetitionThreshold.rtb_le_9
+#print axioms BalancedRepetitionThreshold.rtb_strict_le_9
+#print axioms BalancedRepetitionThreshold.rtb_9_eq
+#print axioms BalancedRepetitionThreshold.rtb_strict_9_eq
+#print axioms BalancedRepetitionThreshold.rtb_9_lt_printed
+#print axioms BalancedRepetitionThreshold.rtb_le_10
+#print axioms BalancedRepetitionThreshold.rtb_strict_le_10
+#print axioms BalancedRepetitionThreshold.rtb_10_eq
+#print axioms BalancedRepetitionThreshold.rtb_strict_10_eq
+#print axioms BalancedRepetitionThreshold.rtb_10_lt_printed
+#print axioms BalancedRepetitionThreshold.r22_1_1_main
+
+-- Solution.lean (26 Palomar compared theorems)
+#print axioms BalancedRepetitionThresholdChallenge.rtb_7_eq
+#print axioms BalancedRepetitionThresholdChallenge.rtb_9_eq
+#print axioms BalancedRepetitionThresholdChallenge.rtb_10_eq
+#print axioms BalancedRepetitionThresholdChallenge.rtb_7_lt_printed
+#print axioms BalancedRepetitionThresholdChallenge.rtb_9_lt_printed
+#print axioms BalancedRepetitionThresholdChallenge.rtb_10_lt_printed
+#print axioms BalancedRepetitionThresholdChallenge.rtb_strict_7_eq
+#print axioms BalancedRepetitionThresholdChallenge.rtb_strict_9_eq
+#print axioms BalancedRepetitionThresholdChallenge.rtb_strict_10_eq
+#print axioms BalancedRepetitionThresholdChallenge.critExp_ge_7
+#print axioms BalancedRepetitionThresholdChallenge.critExp_ge_9
+#print axioms BalancedRepetitionThresholdChallenge.critExp_ge_10
+#print axioms BalancedRepetitionThresholdChallenge.v7_isBalanced
+#print axioms BalancedRepetitionThresholdChallenge.v9_isBalanced
+#print axioms BalancedRepetitionThresholdChallenge.v10_isBalanced
+#print axioms BalancedRepetitionThresholdChallenge.v7_usesAllLetters
+#print axioms BalancedRepetitionThresholdChallenge.v9_usesAllLetters
+#print axioms BalancedRepetitionThresholdChallenge.v10_usesAllLetters
+#print axioms BalancedRepetitionThresholdChallenge.v7_attains
+#print axioms BalancedRepetitionThresholdChallenge.v9_attains
+#print axioms BalancedRepetitionThresholdChallenge.v10_attains
+#print axioms BalancedRepetitionThresholdChallenge.v7_critExp_eq
+#print axioms BalancedRepetitionThresholdChallenge.v9_critExp_eq
+#print axioms BalancedRepetitionThresholdChallenge.v10_critExp_eq
+#print axioms BalancedRepetitionThresholdChallenge.sSup_minPeriodExponentSet_eq_critExp
+#print axioms BalancedRepetitionThresholdChallenge.r22_1_1_main

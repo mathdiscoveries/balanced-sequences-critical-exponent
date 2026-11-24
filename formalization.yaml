@@ -1,0 +1,363 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Balanced-Sequence Repetition Threshold Refutation: Exact RTB(7) = 6/5, RTB(9) = 8/7, and RTB(10) = 9/8"
+  description: >-
+    Unconditional Lean 4 (v4.35.0) + Mathlib formalization establishing exact
+    values of the balanced-sequence repetition threshold RTB(d) for alphabets of
+    size 7, 9, and 10: RTB(7) = RTB*(7) = 6/5 < 5/4, RTB(9) = RTB*(9) = 8/7 < 7/6,
+    and RTB(10) = RTB*(10) = 9/8 < 8/7, refuting three of the six values
+    (d - 2)/(d - 3) listed as established for 5 <= d <= 10 in papers from 2018
+    to 2023. Each infimum is proved both from below via an exhaustive finite
+    prefix-refutation witness tree checked by kernel reduction (905, 2941, and
+    4868 nodes respectively) and from above via an explicit 1-balanced
+    Sturmian-colouring witness (v7, v9, v10) using all d letters and attaining
+    its critical exponent as a maximum over minimal-period factors. Main results
+    in the companion paper: 6 of 6 in Lean 4 (100%) · 12 of 12 abstract claims
+    in Lean 4 (100%) · 18 of 18 paper claims in Lean 4 (100%) · 0 by external
+    certificate · 0 by written proof. Within BalancedRepetitionThreshold, 11 of
+    13 Lean files import Mathlib; all 26 compared theorems in Solution.lean and
+    all 193 public theorems in BalancedRepetitionThreshold compile with zero
+    sorry, zero native_decide, and Lean's standard axioms only. The cases d = 5,
+    6, 8, and d >= 11 are not addressed. Companion working paper and
+    verification archives are hosted at
+    https://mathdiscoveries.org/results/balanced-sequences-critical-exponent.
+  authors:
+    - "Tyler B. Hughes"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Tyler B. Hughes"
+
+classification:
+  arxiv: ["math.CO", "cs.FL"]
+  msc2020: ["68R15", "05A05", "11J70", "68V20"]
+
+sources:
+  - title: "Balanced-Sequence Repetition Threshold Refutation: Exact RTB(7) = 6/5, RTB(9) = 8/7, and RTB(10) = 9/8"
+    authors:
+      - "Tyler B. Hughes"
+    id: "https://mathdiscoveries.org/results/balanced-sequences-critical-exponent"
+    type: original-proof
+    location: "Companion page, working paper, verification archives, and prior-work notes at https://mathdiscoveries.org/results/balanced-sequences-critical-exponent"
+    relationship: other
+    author_endorsement: participated
+    note: >-
+      Discovery of the modified Sturmian slopes for v7, v9, and v10, all Lean 4
+      + Mathlib proofs (both finite lower-bound witness trees and all-periods
+      rotation-engine upper bounds), and internal adversarial reviews were
+      produced by AI research agents built and directed by Tyler B. Hughes. The
+      periodic colouring words of v7 and v9 are those of x7 and x9 in Table 1 of
+      Rampersad, Shallit, and Vandomme (arXiv:1801.05334), and v10 uses the
+      delta = 5 instance of the x_{2*delta} colouring family of Dvorakova,
+      Pelantova, Opocenska, and Shur (arXiv:2112.02854, Theorem 19). No human
+      mathematician has yet refereed the proof.
+  - title: "Critical exponents of infinite balanced words"
+    authors:
+      - "Narad Rampersad"
+      - "Jeffrey Shallit"
+      - "Élise Vandomme"
+    id: "https://arxiv.org/abs/1801.05334"
+    type: paper
+    location: "arXiv:1801.05334 (2018); Theoretical Computer Science 777 (2019), 454-463"
+    relationship: background
+    note: >-
+      Read in full (arXiv:1801.05334v1). Defines balanced words and critical
+      exponents, constructs the colourings x_k for 3 <= k <= 10 (Table 1, whose
+      periodic colourings for x_7 and x_9 are reused in v_7 and v_9 with
+      modified Sturmian slopes), and reports computer backtracking searches
+      suggesting RTB(k) = (k - 2)/(k - 3) for 5 <= k <= 9.
+  - title: "Critical exponent of infinite balanced words via the Pell number system"
+    authors:
+      - "Aseem R. Baranwal"
+      - "Jeffrey Shallit"
+    id: "https://arxiv.org/abs/1902.00503"
+    type: paper
+    location: "arXiv:1902.00503 (2019)"
+    relationship: background
+    note: >-
+      Abstract, opening of Section 3, and Section 4 read; rest unread [to
+      check]. Establishes E(x_5) = 3/2 and reports the five longest 5-letter
+      balanced words of critical exponent < 3/2 (length 44), used as an external
+      calibration check in the companion paper.
+  - title: "On balanced sequences and their critical exponent"
+    authors:
+      - "Francesco Dolce"
+      - "Ľubomíra Dvořáková"
+      - "Edita Pelantová"
+    id: "https://arxiv.org/abs/2108.07503"
+    type: paper
+    location: "arXiv:2108.07503 (2022)"
+    relationship: background
+    note: >-
+      Abstract, introduction, Section 10, and opening of appendix read; method
+      sections unread [to check]. Computes E(x_9) = 7/6 and E(x_10) = 8/7 and
+      cites the lower bound E(v) >= 7/6 for 9-letter balanced sequences.
+  - title: "On minimal critical exponent of balanced sequences"
+    authors:
+      - "Ľubomíra Dvořáková"
+      - "Edita Pelantová"
+      - "Daniela Opočenská"
+      - "Arseny M. Shur"
+    id: "https://arxiv.org/abs/2112.02854"
+    type: paper
+    location: "arXiv:2112.02854 (2021); Theoretical Computer Science 922 (2022)"
+    relationship: background
+    note: >-
+      Read in full (arXiv:2112.02854v1). Abstract lists RTB(d) = (d - 2)/(d - 3)
+      as known for d in {5, 6, 7, 8, 9, 10}; Theorem 13 and footnote 3 note the
+      general lower bound E(v) >= (d - 1)/(d - 2); Theorem 19 introduces the
+      x_{2*delta} colouring family for delta >= 7 whose delta = 5 instance gives
+      our 10-letter witness v_10.
+  - title: "Asymptotic repetitive threshold of balanced sequences"
+    authors:
+      - "Ľubomíra Dvořáková"
+      - "Daniela Opočenská"
+      - "Edita Pelantová"
+    id: "https://arxiv.org/abs/2208.00366"
+    type: paper
+    location: "arXiv:2208.00366 (2022)"
+    relationship: background
+    note: >-
+      Abstract and introduction read; body unread [to check]. Lists
+      RTB(d) = 1 + 1/(d - 3) for 5 <= d <= 10 as known.
+  - title: "An upper bound on asymptotic repetitive threshold of balanced sequences via colouring of the Fibonacci sequence"
+    authors:
+      - "Ľubomíra Dvořáková"
+      - "Edita Pelantová"
+    id: "https://arxiv.org/abs/2211.11877"
+    type: paper
+    location: "arXiv:2211.11877 (2022)"
+    relationship: background
+    note: >-
+      Abstract read; body unread [to check]. Notes that the balanced repetition
+      threshold is known to be at least 1 + 1/(d - 2) for each d >= 3.
+  - title: "The repetition threshold of episturmian sequences"
+    authors:
+      - "Ľubomíra Dvořáková"
+      - "Edita Pelantová"
+    id: "https://arxiv.org/abs/2309.00988"
+    type: paper
+    location: "arXiv:2309.00988 (2023)"
+    relationship: background
+    note: >-
+      Abstract and introduction read; body unread [to check]. Repeats the list
+      RT(C_d) = 1 + 1/(d - 3) for 5 <= d <= 10 for the class of balanced
+      sequences.
+  - title: "Suites équilibrées"
+    authors:
+      - "Pascal Hubert"
+    type: paper
+    location: "Theoretical Computer Science 242 (2000), 91-108"
+    relationship: background
+    note: >-
+      Unread [to check]. Cited only as the historical origin (per arXiv:1801.05334
+      and arXiv:2112.02854) of characterizing aperiodic balanced words as
+      colourings of Sturmian words by constant-gap words; our Lean proofs do not
+      depend on Hubert's characterization.
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Unconditionally proved in Lean 4 (v4.35.0) + Mathlib with standard axioms
+    only (zero sorry, zero native_decide; 11 of 13 files in
+    BalancedRepetitionThreshold import Mathlib): 26 compared theorems (193
+    public declarations across the supporting library) establishing exact
+    RTB(7) = RTB_strict(7) = 6/5 < 5/4, RTB(9) = RTB_strict(9) = 8/7 < 7/6, and
+    RTB(10) = RTB_strict(10) = 9/8 < 8/7, universal lower bounds E(w) >= 6/5,
+    8/7, 9/8 for every 1-balanced sequence over Fin 7, Fin 9, Fin 10 via
+    exhaustive kernel-checked witness trees (905, 2941, and 4868 nodes), direct
+    1-balance, full alphabet usage, explicit attaining factors, and exact
+    critical exponents of the Sturmian-colouring witnesses v7, v9, v10 (attained
+    in minPeriodExponentSet), plus equivalence of the minimal-period and
+    any-period critical exponent definitions. Companion paper coverage: 6 of 6
+    main results in Lean 4 (100%) · 12 of 12 abstract claims in Lean 4 (100%) ·
+    18 of 18 paper claims in Lean 4 (100%) · 0 by external certificate · 0 by
+    written proof. The cases d = 5, 6, 8, and d >= 11 are not addressed.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+
+automation:
+  methods:
+    - method: agent
+      models: []
+      framework: "AI research agent pipeline built and directed by Tyler B. Hughes"
+      tool_setup: >-
+        Autonomous builder, adversarial falsifier, and blind Lean auditor agents
+        found the Sturmian slopes for v7, v9, and v10, constructed the finite
+        lower-bound refutation trees and unified circle-rotation / continued-
+        fraction engine, wrote the Lean 4 + Mathlib formalization, and verified
+        every declaration in the kernel.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local machine"
+      prompting_notes: "Goal-directed mathematical discovery and Lean 4 formalization."
+  spend_usd: "not tracked"
+  notes: >-
+    All proof discovery, Lean 4 formalization, finite witness trees, and
+    internal adversarial reviews were produced by AI research agents built and
+    directed by Tyler B. Hughes. No human mathematician has yet refereed the
+    proof.
+
+fidelity:
+  divergences: >-
+    None. All 18 of 18 claims in the companion working draft (6 of 6 main
+    results and 12 of 12 abstract claims) are formalized and proved in Lean 4
+    with exact statement fidelity and no extra recurrence, aperiodicity, or
+    alphabet-usage hypotheses. The cases d = 5, 6, 8, and d >= 11 are outside
+    the scope of both the companion draft and this formalization.
+
+review:
+  status: agent-reviewed
+  reviewers:
+    - "Internal adversarial falsifier, cross-model referee, and blind Lean auditor agents"
+  notes: >-
+    Independently cold-built and audited internally with zero warnings, zero
+    sorry, zero native_decide, and standard axioms only via
+    BalancedRepetitionThreshold/Verify.lean. Independent mechanical Lean
+    checking and automated editorial checks are recorded in Palomar's report.
+    No human mathematician has yet refereed the proof.
+
+alignment:
+  namespace: "BalancedRepetitionThresholdChallenge"
+  statements:
+    - source: "Theorem 1 (Seven letters): RTB(7) = 6/5"
+      lean: "BalancedRepetitionThresholdChallenge.rtb_7_eq"
+      module: "Challenge"
+      status: proved
+      note: "Exact infimum of E(w) over all 1-balanced words on 7 letters equals 6/5."
+    - source: "Theorem 2 (Nine letters): RTB(9) = 8/7"
+      lean: "BalancedRepetitionThresholdChallenge.rtb_9_eq"
+      module: "Challenge"
+      status: proved
+      note: "Exact infimum of E(w) over all 1-balanced words on 9 letters equals 8/7."
+    - source: "Theorem 3 (Ten letters): RTB(10) = 9/8"
+      lean: "BalancedRepetitionThresholdChallenge.rtb_10_eq"
+      module: "Challenge"
+      status: proved
+      note: "Exact infimum of E(w) over all 1-balanced words on 10 letters equals 9/8."
+    - source: "Corollary 4 (Below the listed value, d = 7): RTB(7) < 5/4"
+      lean: "BalancedRepetitionThresholdChallenge.rtb_7_lt_printed"
+      module: "Challenge"
+      status: proved
+      note: "Strict refutation of the listed value 5/4 for 7-letter balanced words."
+    - source: "Corollary 5 (Below the listed value, d = 9): RTB(9) < 7/6"
+      lean: "BalancedRepetitionThresholdChallenge.rtb_9_lt_printed"
+      module: "Challenge"
+      status: proved
+      note: "Strict refutation of the listed value 7/6 for 9-letter balanced words."
+    - source: "Corollary 6 (Below the listed value, d = 10): RTB(10) < 8/7"
+      lean: "BalancedRepetitionThresholdChallenge.rtb_10_lt_printed"
+      module: "Challenge"
+      status: proved
+      note: "Strict refutation of the listed value 8/7 for 10-letter balanced words."
+    - source: "Strict all-letters threshold for d = 7: RTB*(7) = 6/5"
+      lean: "BalancedRepetitionThresholdChallenge.rtb_strict_7_eq"
+      module: "Challenge"
+      status: proved
+      note: "Exact infimum restricting to 1-balanced words using all 7 letters."
+    - source: "Strict all-letters threshold for d = 9: RTB*(9) = 8/7"
+      lean: "BalancedRepetitionThresholdChallenge.rtb_strict_9_eq"
+      module: "Challenge"
+      status: proved
+      note: "Exact infimum restricting to 1-balanced words using all 9 letters."
+    - source: "Strict all-letters threshold for d = 10: RTB*(10) = 9/8"
+      lean: "BalancedRepetitionThresholdChallenge.rtb_strict_10_eq"
+      module: "Challenge"
+      status: proved
+      note: "Exact infimum restricting to 1-balanced words using all 10 letters."
+    - source: "Universal lower bound for d = 7: E(w) >= 6/5 for every balanced word on 7 letters"
+      lean: "BalancedRepetitionThresholdChallenge.critExp_ge_7"
+      module: "Challenge"
+      status: proved
+      note: "Discharged by exhaustive 905-node finite witness tree in the Lean kernel."
+    - source: "Universal lower bound for d = 9: E(w) >= 8/7 for every balanced word on 9 letters"
+      lean: "BalancedRepetitionThresholdChallenge.critExp_ge_9"
+      module: "Challenge"
+      status: proved
+      note: "Discharged by exhaustive 2941-node finite witness tree in the Lean kernel."
+    - source: "Universal lower bound for d = 10: E(w) >= 9/8 for every balanced word on 10 letters"
+      lean: "BalancedRepetitionThresholdChallenge.critExp_ge_10"
+      module: "Challenge"
+      status: proved
+      note: "Discharged by exhaustive 4868-node finite witness tree in the Lean kernel."
+    - source: "Explicit witness v7 is 1-balanced"
+      lean: "BalancedRepetitionThresholdChallenge.v7_isBalanced"
+      module: "Challenge"
+      status: proved
+      note: "Direct proof from Sturmian 1-balance and constant-gap periodic colourings."
+    - source: "Explicit witness v9 is 1-balanced"
+      lean: "BalancedRepetitionThresholdChallenge.v9_isBalanced"
+      module: "Challenge"
+      status: proved
+      note: "Direct proof from Sturmian 1-balance and constant-gap periodic colourings."
+    - source: "Explicit witness v10 is 1-balanced"
+      lean: "BalancedRepetitionThresholdChallenge.v10_isBalanced"
+      module: "Challenge"
+      status: proved
+      note: "Direct proof from Sturmian 1-balance and constant-gap periodic colourings."
+    - source: "Explicit witness v7 uses all 7 letters"
+      lean: "BalancedRepetitionThresholdChallenge.v7_usesAllLetters"
+      module: "Challenge"
+      status: proved
+      note: "Surjectivity of countTrue/countFalse onto N for irrational alpha7."
+    - source: "Explicit witness v9 uses all 9 letters"
+      lean: "BalancedRepetitionThresholdChallenge.v9_usesAllLetters"
+      module: "Challenge"
+      status: proved
+      note: "Surjectivity of countTrue/countFalse onto N for irrational alpha9."
+    - source: "Explicit witness v10 uses all 10 letters"
+      lean: "BalancedRepetitionThresholdChallenge.v10_usesAllLetters"
+      module: "Challenge"
+      status: proved
+      note: "Surjectivity of countTrue/countFalse onto N for irrational alpha10."
+    - source: "Explicit attaining factor in v7: HasPeriod v7 0 6 5"
+      lean: "BalancedRepetitionThresholdChallenge.v7_attains"
+      module: "Challenge"
+      status: proved
+      note: "Initial length-6 factor has period 5, realizing exponent 6/5."
+    - source: "Explicit attaining factor in v9: HasPeriod v9 0 8 7"
+      lean: "BalancedRepetitionThresholdChallenge.v9_attains"
+      module: "Challenge"
+      status: proved
+      note: "Initial length-8 factor has period 7, realizing exponent 8/7."
+    - source: "Explicit attaining factor in v10: HasPeriod v10 4 9 8"
+      lean: "BalancedRepetitionThresholdChallenge.v10_attains"
+      module: "Challenge"
+      status: proved
+      note: "Factor at index 4 of length 9 has period 8, realizing exponent 9/8."
+    - source: "Exact critical exponent E(v7) = 6/5 attained in minPeriodExponentSet v7"
+      lean: "BalancedRepetitionThresholdChallenge.v7_critExp_eq"
+      module: "Challenge"
+      status: proved
+      note: "Combines all-periods rotation/continued-fraction upper bound with attainment."
+    - source: "Exact critical exponent E(v9) = 8/7 attained in minPeriodExponentSet v9"
+      lean: "BalancedRepetitionThresholdChallenge.v9_critExp_eq"
+      module: "Challenge"
+      status: proved
+      note: "Combines all-periods rotation/continued-fraction upper bound with attainment."
+    - source: "Exact critical exponent E(v10) = 9/8 attained in minPeriodExponentSet v10"
+      lean: "BalancedRepetitionThresholdChallenge.v10_critExp_eq"
+      module: "Challenge"
+      status: proved
+      note: "Combines all-periods rotation/continued-fraction upper bound with attainment."
+    - source: "Equivalence of minimal-period and any-period critical exponent definitions"
+      lean: "BalancedRepetitionThresholdChallenge.sSup_minPeriodExponentSet_eq_critExp"
+      module: "Challenge"
+      status: proved
+      note: "Proves sSup (minPeriodExponentSet w) = critExp w for every w : N -> Fin d."
+    - source: "Combined headline theorem for d in {7, 9, 10}"
+      lean: "BalancedRepetitionThresholdChallenge.r22_1_1_main"
+      module: "Challenge"
+      status: proved
+      note: "Bundles exact RTB, RTB_strict, strict refutation, and attained witnesses v7, v9, v10."
+
+acknowledgements: >-
+  Built on Lean 4 and Mathlib. Periodic colouring words for v7 and v9 reuse the
+  colourings of x7 and x9 from Rampersad, Shallit, and Vandomme (arXiv:1801.05334,
+  Table 1), and v10 uses the delta = 5 instance of the x_{2*delta} colouring
+  family of Dvorakova, Pelantova, Opocenska, and Shur (arXiv:2112.02854,
+  Theorem 19).
